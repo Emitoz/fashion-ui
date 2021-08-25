@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashionng UI</title>
+    
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/feather.css">
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="container">
+            <nav class="header-nav">
+                <div class="brand">
+                    <a href="#">
+                        <img class="logo" src="./img/Logo.svg" alt="">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link-item"><a href="#">Shop</a></li>
+                    <li class="nav-link-item"><a href="#">Contact</a></li>
+                    <li class="nav-link-item"><a href="#">Sign in</a></li>
+                </ul>
+                <div class="search-and-cart">
+                    <div class="search">
+                        <i class="feather-search"></i>
+                        <input type="text" placeholder="search">
+                    </div>
+                    <div>
+                        <i class="feather-shopping-bag cart-btn"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-flex">
+                <div class="hero-content">
+                    <h1>Taste. Elegance. You.</h1>
+                    <p>Explore our amazing catalog of items, we’ve got a fit for all sizes, moods and tastes.</p>
+                    <div class="hero-btns">
+                        <button class="button button-gold">Start shopping<i class="feather-shopping-cart"></i></button>
+                        <button class="button button-ghost">Join Us</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./img/hero shot.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="container">
+            <h3>Categories</h3>
+            <div class="categories-grid">
+                <div class="category-wrapper">
+                    <div class="category" style="background: url(./img/sneakers.jpg);">
+                        <div class="category-overlay">
+                            <h5>Sneakers</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <div class="category" style="background: url(./img/dressup.jpg);">
+                        <div class="category-overlay">
+                            <h5>Dress-ups</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <div class="category" style="background: url(./img/jacket.jpg);">
+                        <div class="category-overlay">
+                            <h5>Jackets</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-wrapper">
+                    <div class="category" style="background: url(./img/bag.jpg);">
+                        <div class="category-overlay">
+                            <h5>Bags</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="container">
+            <h3>Featured collection</h3>
+            <div class="featured-grid">
+                <div class="product">
+                    <div class="product-card">
+                        <div class="price">
+                            <div class="line"></div>
+                            <div class="price-container">
+                                <p>&#8358;25,000</p>
+                            </div>
+                        </div>
+                        <div class="product-image-wrapper">
+                            <div class="product-image" style="background: url(./img/rayban.jpg);">
+                                <div class="product-overlay">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button button-gold">Add to cart<i class="feather-shopping-cart"></i></button>
+                    </div>
+                    <h4 class="product-name">Rayban deluxe shades</h4>
+                </div>
+                <div class="product">
+                    <div class="product-card">
+                        <div class="price">
+                            <div class="line"></div>
+                            <div class="price-container">
+                                <p>&#8358;40,000</p>
+                            </div>
+                        </div>
+                        <div class="product-image-wrapper">
+                            <div class="product-image" style="background: url(./img/jumpsuit.jpg);">
+                                <div class="product-overlay">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button button-gold">Add to cart<i class="feather-shopping-cart"></i></button>
+                    </div>
+                    <h4 class="product-name">D & G Jumpsuit</h4>
+                </div>
+                <div class="product">
+                    <div class="product-card">
+                        <div class="price">
+                            <div class="line"></div>
+                            <div class="price-container">
+                                <p>&#8358;30,000</p>
+                            </div>
+                        </div>
+                        <div class="product-image-wrapper">
+                            <div class="product-image" style="background: url(./img/sneakers.jpg);">
+                                <div class="product-overlay">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button button-gold">Add to cart<i class="feather-shopping-cart"></i></button>
+                    </div>
+                    <h4 class="product-name">Nike Air Sneakers</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+</html>
