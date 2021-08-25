@@ -11,6 +11,9 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./fonts/feather.css">
+
+    <!-- JS -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </head>
 <body>
     <div class="nav-wrapper">
@@ -42,7 +45,7 @@
         <div class="container">
             <div class="hero-flex">
                 <div class="hero-content">
-                    <h1>Taste. Elegance. You.</h1>
+                    <h1 id="catch-phrase"></h1>
                     <p>Explore our amazing catalog of items, we’ve got a fit for all sizes, moods and tastes.</p>
                     <div class="hero-btns">
                         <button class="button button-gold">Start shopping<i class="feather-shopping-cart"></i></button>
@@ -151,4 +154,51 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div class="brand">
+                    <a href="#">
+                        <img class="logo" src="./img/Logo dark.svg" alt="">
+                    </a>
+                </div>
+                <ul class="contact-links">
+                    <li class="contact-link">
+                        <a href="#"><i class="feather-map-pin"></i> Lagos, Nigeria</a>
+                    </li>
+                    <li class="contact-link">
+                        <a href="#"><i class="feather-smartphone"></i> +234 8134225805</a>
+                    </li>
+                    <li class="contact-link">
+                        <a href="#"><i class="feather-at-sign"></i> info@fashion.ng</a>
+                    </li>
+                </ul>
+                <ul class="social-links">
+                    <li class="social-link">
+                        <a href="#"><i class="feather-instagram"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="feather-facebook"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="feather-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gray-line"></div>
+            <p class="copyright">© 2021 Fashionng</p>
+        </div>
+    </footer>
+
+    <script>
+        const phrase = document.querySelector('#catch-phrase');
+        const typewriter = new Typewriter(phrase, { loop: true });
+
+        typewriter.typeString('Taste. Elegance.')
+            .pauseFor(2500)
+            .deleteAll()
+            .typeString('Taste. Elegance. You.')
+            .pauseFor(2500)
+            .start();
+    </script>
 </html>
