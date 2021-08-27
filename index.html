@@ -7,6 +7,7 @@
     <title>Fashionng UI</title>
     
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./mobile-styles.css">
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
@@ -20,6 +21,9 @@
         <div class="container">
             <nav class="header-nav">
                 <div class="brand">
+                    <span class="menu-btn">
+                        <img src="./img/menu-icon.svg" alt="">
+                    </span>
                     <a href="#">
                         <img class="logo" src="./img/Logo.svg" alt="">
                     </a>
@@ -41,11 +45,48 @@
             </nav>
         </div>
     </div>
+
+    <div class="mobile-menu-wrapper">
+        <div class="mobile-menu">
+            <div class="mobile-menu-flex">
+                <div class="top">
+                    <div class="close">
+                        <span class="close-menu">
+                            <i class="feather-x"></i>
+                        </span>
+                    </div>
+                    <div class="logo-area">
+                        <a href="#">
+                            <img class="logo" src="./img/Logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link-item"><a href="#">Shop</a></li>
+                    <li class="nav-link-item"><a href="#">Contact</a></li>
+                    <li class="nav-link-item"><a href="#">Sign in</a></li>
+                </ul>
+                <ul class="social-links">
+                    <li class="social-link">
+                        <a href="#"><i class="feather-instagram"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="feather-facebook"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="feather-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu-safe-area"></div>
+    </div>
+
     <section class="hero">
         <div class="container">
             <div class="hero-flex">
                 <div class="hero-content">
-                    <h1 id="catch-phrase"></h1>
+                    <h1 id="catch-phrase">Taste. Elegance. You.</h1>
                     <p>Explore our amazing catalog of items, we’ve got a fit for all sizes, moods and tastes.</p>
                     <div class="hero-btns">
                         <button class="button button-gold">Start shopping<i class="feather-shopping-cart"></i></button>
@@ -155,7 +196,10 @@
         </div>
     </section>
     <div class="cart-wrapper">
-        <h5>My Cart</h5>
+        <div class="cart-header">
+            <h5>My Cart</h5>
+            <span class="close-cart"><i class="feather-x"></i></span>
+        </div>
         <div class="gray-line"></div>
 
         <div class="cart-item-list">
@@ -217,7 +261,7 @@
                 <div class="cart-item-flex">
                     <div class="cart-image-wrapper">
                         <div class="cart-image-line"></div>
-                        <div class="cart-image bg-image" style="background: url(./img/jacket.jpg);"></div>
+                        <div class="cart-image bg-image" style="background: url(./img/rayban.jpg);"></div>
                     </div>
                     <div class="cart-content">
                         <h4 class="cart-item-name">Rayban deluxe shades</h4>
@@ -288,14 +332,48 @@
     </footer>
 
     <script>
-        const phrase = document.querySelector('#catch-phrase');
-        const typewriter = new Typewriter(phrase, { loop: true });
+        window.onload = function () {
 
-        typewriter.typeString('Taste. Elegance.')
-            .pauseFor(2500)
-            .deleteAll()
-            .typeString('Taste. Elegance. You.')
-            .pauseFor(2500)
-            .start();
+            const show = elem => {
+                elem.style.display = 'block';
+            }
+            const hide = elem => {
+                elem.style.display = 'none';
+            }
+    
+            const toggle = elem => {
+                if (window.getComputedStyle(elem).display === 'block') {
+                    hide(elem);
+                    return;
+                } 
+                show(elem);
+            }
+
+            const mobileMenu = document.querySelector('.mobile-menu-wrapper');
+            const openMobileMenuBtn = document.querySelector('.menu-btn');
+            const closeMobileMenuBtn = document.querySelector('.close-menu');
+            const menuSafeArea = document.querySelector('.menu-safe-area');
+
+            const cartWrapper = document.querySelector('.cart-wrapper');
+            const cartBtn = document.querySelector('.cart-btn');
+            const closeCartBtn = document.querySelector('.close-cart');
+
+            openMobileMenuBtn.addEventListener('click', () => toggle(mobileMenu));
+            closeMobileMenuBtn.addEventListener('click', () => toggle(mobileMenu));
+            menuSafeArea.addEventListener('click', () => toggle(mobileMenu));
+    
+            cartBtn.addEventListener('click', () => toggle(cartWrapper));
+            closeCartBtn.addEventListener('click', () => toggle(cartWrapper));
+    
+            const phrase = document.querySelector('#catch-phrase');
+            const typewriter = new Typewriter(phrase, { loop: true });
+    
+            typewriter.typeString('Taste. Elegance.')
+                .pauseFor(2500)
+                .deleteAll()
+                .typeString('Taste. Elegance. You.')
+                .pauseFor(2500)
+                .start();
+        }
     </script>
 </html>
